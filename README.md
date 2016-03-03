@@ -273,7 +273,7 @@ console.log(sum(1, 2, 3)); // -> 6
 
 ## Spread Operator
 
-The spread operator is like the reverse of rest parameters. It allows you to expand an array into multiple formal parameters.
+The spread operator is like the reverse of rest parameters. It allows you to expand an array or object into multiple formal parameters.
 
 ```js
 function add(a, b) {
@@ -284,3 +284,18 @@ let values = [1, 2];
 
 console.log(add(...values)); // -> 3
 ```
+
+```js
+let x = 1;
+let y = 2;
+let objectToExtend = {
+  a: 3,
+  b: 4,
+};
+
+let extendedObject = { x, y, ...objectToExtend };
+
+console.log(extendedObject); // -> { x: 1, y: 1, a: 3, b: 4 }
+```
+
+
