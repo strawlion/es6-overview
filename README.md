@@ -167,30 +167,41 @@ greet('hey'); // -> hey world
 ## Classes
 
 ```js
-class Hello {
-  
-  constructor(name) {
-    this.name = name;
-  }
-
-  sayHello() {
-    return 'Hello ' + this.name + '!';
-  }
-
-  static sayHelloAll() {
-    return 'Hello everyone!';
-  }
+class Point {
+    
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    static copyPoint(point) {
+      return new Point(point.x, point.y);
+    }
+    
+    toString() {
+        return '(' + this.x + ', ' + this.y + ')';
+    }
+}
+    
+class ColoredPoint extends Point {
+    color = 'blue';
+    
+    constructor(x, y, color) {
+        super(x, y);
+        this.color = color;
+    }
+    
+    toString() {
+        return super.toString() + ' in ' + this.color;
+    }
 }
 
-class HelloWorld extends Hello {
-  constructor() {
-    super('World');
-  }
-}
+let coloredPoint = new ColoredPoint(25, 8, 'green');
+coloredPoint.toString(); // '(25, 8) in green'
 
-var helloWorld = new HelloWorld();
-console.log(helloWorld.sayHello()) // -> Hello World!
-console.log(Hello.sayHelloAll()); // -> Hello everyone!
+console.log(coloredPoint instanceof ColorPoint); // true
+console.log(coloredPoint instanceof Point); // true
+console.log(Point.copyPoint(coloredPoint)) // { x: 25, y: 8 }
 ```
 
 ## Modules
