@@ -1,7 +1,5 @@
 # <img src="http://i.imgur.com/yy1sACZ.png" width="100px"> ESNext
 
-*Please note this document is very much a work in progress. Contributions are welcome.*
-
 **Table of contents:**
 
 1. [Arrow Functions](#arrow-functions)
