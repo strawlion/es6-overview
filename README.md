@@ -197,8 +197,6 @@ console.log(Hello.sayHelloAll()); // -> Hello everyone!
 
 Modules try to solve many issues in dependencies and deployment, allowing users to create modules with explicit exports, import specific exported names from those modules, and keep these names separate.
 
-*Assumes an environment using CommonJS*
-
 
 app.js
 
